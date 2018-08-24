@@ -7,13 +7,13 @@ object gimenez {
 	var dinero = 0
 	
 	// FIX: devuelvo la propiedad sueldo en vez de 15000
-	method sueldo() { return sueldo }
+	method sueldo() = sueldo 
 	
 	method sueldo(nuevoValor) { sueldo = nuevoValor }
 
   // Metodo agregado para que no se rompa pagarA de Galvan	
 	method cobrarSueldo() {
-	  dinero += sueldo
+	  dinero += self.sueldo()
 	}
 	
 	method totalCobrado() { return dinero }
